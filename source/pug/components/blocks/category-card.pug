@@ -1,0 +1,8 @@
+mixin category-card(data)
+  a.category-card(href=data.href)
+    .category-card__image
+      +img("content/categories", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
+    .category-card__info
+      h3.category-card__title!=data.title
+      button.btn-reset.category-card__button(type="button") Смотреть
+        +icon("icon-arrow-right", 44, 16)

@@ -1,0 +1,19 @@
+mixin info(data)
+    section.section&attributes(attributes)
+      .container
+        .section__container
+          .section__slider.swiper(data-slider="info")
+            .section__slides.swiper-wrapper
+              each item in data.list
+                .section__slide.swiper-slide
+                  .section__image-wrapper
+                    +img(item.image.path, item.image.src, item.image.format, item.image.width, item.image.height, item.image.alt)
+          .section__navigation.swiper-button-prev
+          .section__navigation.swiper-button-next
+        //  h3!=data.title
+          .section__block
+            p!=data.description
+            +btn({href: "#", text: "Оставить заявку"}).intro__button
+          .section__call
+            span Появились вопросы? Звоните!
+            a(href="tel:+79251089127") +7(925)-108-9127

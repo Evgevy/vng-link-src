@@ -1,0 +1,139 @@
+mixin time-block(options)
+    - const extraClass = options.extraClass ? options.extraClass : ''
+    section.time-block(class=extraClass)
+        +breadcrumbs({
+            isStatic: true,
+            list: [
+                {
+                    href: "#"
+                },
+                {
+                    text: options.last
+                }
+
+            ]
+        })
+        .time-block__content 
+            h1.time-block__title Расписание обучения и мастер-классов
+            ul.time-block__list 
+                li 
+                    .time-block__box 
+                        .time-block__info 
+                            p Обучение тибетские поющие чаши. Звукотерапия. Массаж
+                        form(method="post")
+                            .time-block__form 
+                                .time-block__date 
+                                    img(src="img/sprite/calendar.svg")
+                                    p Выбрать дату
+                                +custom-select({
+                                    name: "select",
+                                    placeholder: "5-7 июля 2024",
+                                    optionsList: [
+                                        { text: "5-7 июля 2024", isActive: true },
+                                        { text: "9-11 августа 2024", isActive: false },
+                                        { text: "30-11 сентября 2024", isActive: false},
+                                        
+                                    ]
+
+                                }).form__input-select
+                                button(type="submit").time-block__btn.intro__link Записаться
+                li 
+                    .time-block__box 
+                        .time-block__info 
+                            p Обучение Вибрационно-акустический массаж с одной чашей
+                        form(method="post")
+                            .time-block__form 
+                                .time-block__date 
+                                    img(src="img/sprite/calendar.svg")
+                                    p Выбрать дату
+                                +custom-select({
+                                    name: "select",
+                                    placeholder: "5-7 июля 2024",
+                                    optionsList: [
+                                        { text: "5-7 июля 2024", isActive: true },
+                                        { text: "9-11 августа 2024", isActive: false },
+                                        { text: "9-11 августа 2024", isActive: false},
+                                    ]
+
+                                }).form__input-select
+                                button(type="submit").time-block__btn.intro__link Записаться
+                li 
+                    .time-block__box 
+                        .time-block__info 
+                            p Мастер-класс<br> с поющими чашами<br> Основы Звукотерапии
+                        form(method="post")
+                            .time-block__form 
+                                .time-block__date 
+                                    img(src="img/sprite/calendar.svg")
+                                    p Выбрать дату
+                                +custom-select({
+                                    name: "select",
+                                    placeholder: "5-7 июля 2024",
+                                    optionsList: [
+                                        { text: "15-7 июля 2024", isActive: true },
+                                        { text: "9-11 августа 2024", isActive: false },
+                                        { text: "9-11 августа 2024", isActive: false},
+                                    ]
+
+                                }).form__input-select
+                                button(type="submit").time-block__btn.intro__link Записаться
+                li 
+                    .time-block__box 
+                        .time-block__info 
+                            p Обучение<br> Основы гонг-мастерства
+                        form(method="post")
+                            .time-block__form 
+                                .time-block__date 
+                                    img(src="img/sprite/calendar.svg")
+                                    p Выбрать дату
+                                +custom-select({
+                                    name: "select",
+                                    placeholder: "5-7 июля 2024",
+                                    optionsList: [
+                                        { text: "5-7 июля 2024", isActive: true },
+                                        { text: "9-11 августа 2024", isActive: false },
+                                        { text: "9-11 августа 2024", isActive: false},
+                                    ]
+
+                                }).form__input-select
+                                button(type="submit").time-block__btn.intro__link Записаться
+                li 
+                    .time-block__box 
+                        .time-block__info 
+                            p Обучение<br> ВИБРАЦИОННО-АКУСТИЧЕСКИЙ МАССАЖ<br> с поющими чашами в бане и на воде
+                        form(method="post")
+                            .time-block__form 
+                                .time-block__date 
+                                    img(src="img/sprite/calendar.svg")
+                                    p Выбрать дату
+                                +custom-select({
+                                    name: "select",
+                                    placeholder: "5-7 июля 2024",
+                                    optionsList: [
+                                        { text: "5-7 июля 2024", isActive: true },
+                                        { text: "9-11 августа 2024", isActive: false },
+                                        { text: "9-11 августа 2024", isActive: false},
+                                    ]
+
+                                }).form__input-select
+                                button(type="submit").time-block__btn.intro__link Записаться
+                li 
+                    .time-block__box 
+                        .time-block__info 
+                            p онлайн обучение Тибетские поющие чаши. звукотерапия. Массаж
+                        form(method="post")
+                            .time-block__form 
+                                .time-block__date 
+                                    img(src="img/sprite/calendar.svg")
+                                    p Выбрать дату
+                                +custom-select({
+                                    name: "select",
+                                    placeholder: "5-7 июля 2024",
+                                    optionsList: [
+                                        { text: "5-7 июля 2024", isActive: true },
+                                        { text: "9-11 августа 2024", isActive: false },
+                                        { text: "9-11 августа 2024", isActive: false},
+                                    ]
+
+                                }).form__input-select
+                                button(type="submit").time-block__btn.intro__link Записаться

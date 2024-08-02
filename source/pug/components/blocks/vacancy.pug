@@ -1,0 +1,8 @@
+mixin vacancy(data)
+	section.section&attributes(attributes)
+		.container
+			.section__wrapper.section__wrapper_reset
+				.section__heading.gallery__title
+					+icon("icon-figure", 24, 28)
+					h2.title.title--h2!=data.title
+				p.section__paragraph.vacancy__paragraph!=data.description

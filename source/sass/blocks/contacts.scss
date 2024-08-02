@@ -1,0 +1,106 @@
+.contacts {
+    &__content {
+        max-width: 1420px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    &__title {
+        color: rgb(26, 26, 26);
+        font-family: Blinker, sans-serif;
+        font-size: 45px;
+        font-weight: 700;
+        line-height: 130%;
+        text-transform: uppercase;
+        margin: 0 0 45px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px 20px;
+        margin-bottom: 70px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__name {
+        color: rgb(24, 44, 143);
+        font-family: Blinker, sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 140%;
+        margin: 0 0 10px;
+    }
+
+    &__desc {
+        color: rgb(26, 26, 26);
+        font-family: Blinker,sans-serif;
+        font-size: 20px;
+        line-height: 150%;
+        max-width: 520px;
+        width: 100%;
+        margin: 0;
+    }
+
+    /*&__map {
+        overflow:hidden;
+        clip-path: polygon(0 25%, 100% 25%, 100% 100%, 0% 100%);
+        margin-top: -150px;
+    }*/
+
+    iframe {
+        max-width: 100%;
+    }
+    iframe > .place-card .place-card-large {
+        display: none;
+    }
+
+    iframe > .gm-style.place-card-large {
+        display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+        &__content {
+            padding: 0 45px;
+        }
+
+        &__title {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        &__inner {
+            flex-direction: column;
+            margin-bottom: 60px;
+        }
+
+        &__desc {
+            font-size: 18px;
+        }
+    }
+
+    @media screen and (max-width: 390px) {
+        &__content {
+            padding: 0 35px;
+        }
+
+        &__title {
+            font-size: 24px;
+        }
+
+        &__inner {
+            flex-direction: column-reverse;
+            margin-bottom: 50px;
+        }
+
+        &__name {
+            font-size: 22px;
+        }
+    }
+}

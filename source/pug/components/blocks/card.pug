@@ -1,0 +1,29 @@
+mixin card(data)
+  a.card(href=data.href)
+    .card__image
+      +img(data.type ? "content/installations" : "content/products", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
+    .card__info
+      .card__top
+        h3.card__title!=data.title
+        .card__row
+          if data.type
+            p Глубина бурения:
+            span!=data.depth
+          else
+            p Грузоподъемность:
+            span!=data.capacity
+        .card__row
+          if data.type
+            p Максимальная<br>нагрузка на крюке:
+            span!=data.workflow
+          else
+            p Глубина бурения:
+            span!=data.depth
+        .card__row
+          if data.type
+            p Скорость подъема<br>крюка без нагрузки:
+            span!=data.speed
+          else
+            p Крутящий момент:
+            span!=data.moment
+      button.btn-reset.card__button(type="button") Подробнее

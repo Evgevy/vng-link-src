@@ -1,0 +1,13 @@
+mixin specifications(data)
+	section.section&attributes(attributes)
+		.container
+			.section__wrapper
+				h3.section__title Технические характеристики
+				.section__table
+					table
+						each item in (data.list)
+							tr
+								td!=item.param
+								td!=item.value
+					if (data.image)
+						img( src="./img/content/product/tech-specifications.svg" alt="image")

@@ -1,0 +1,134 @@
+mixin events(options)
+    - const eventTitle = options.eventTitle ? options.eventTitle : ''
+    - const extraClass = options.extraClass ? options.extraClass : ''
+    - const contentClass = options.specContent ? options.specContent : ''
+    section.events(class=extraClass)
+        if options.extraClass === 'extra'
+            +breadcrumbs({
+                    isStatic: true,
+                    list: [
+                        {
+                            href: "#"
+                        },
+                        {
+                            text: options.last
+                        }
+
+                    ]
+                })
+        else
+        .events__content(class=options.contentClass)
+            if eventTitle === 'event'
+                h1(class=eventTitle)=options.title
+                ul.events__list
+                    li.events__item 
+                        a(href="#!").events__link
+                            .events__image 
+                                img(src="img/content/event1.png" alt="Фото событий компании Bowlmania")
+                            .events__info 
+                                p Магазин тибетских чаш Bowls Mania на маркете «Delhi Базар» 21-23 апреля
+                    li.events__item 
+                        a(href="#!").events__link
+                            .events__image 
+                                img(src="img/content/event4.png" alt="Фото событий компании Bowlmania")
+                            .events__info 
+                                p Магазин тибетских чаш Bowls Mania на маркете «Delhi Базар» 21-23 апреля
+                    li.events__item 
+                        a(href="#!").events__link
+                            .events__image 
+                                img(src="img/content/event2.png" alt="Фото событий компании Bowlmania")
+                            .events__info 
+                                p Магазин тибетских чаш Bowls Mania на маркете «Delhi Базар» 21-23 апреля
+                    li.events__item 
+                        a(href="#!").events__link
+                            .events__image 
+                                img(src="img/content/event1.png" alt="Фото событий компании Bowlmania")
+                            .events__info 
+                                p Магазин тибетских чаш Bowls Mania на маркете «Delhi Базар» 21-23 апреля
+                    li.events__item 
+                        a(href="#!").events__link
+                            .events__image 
+                                img(src="img/content/event3.png" alt="Фото событий компании Bowlmania")
+                            .events__info 
+                                p Магазин тибетских чаш Bowls Mania на маркете «Delhi Базар» 21-23 апреля
+                    li.events__item 
+                        a(href="#!").events__link
+                            .events__image 
+                                img(src="img/content/event2.png" alt="Фото событий компании Bowlmania")
+                            .events__info 
+                                p Магазин тибетских чаш Bowls Mania на маркете «Delhi Базар» 21-23 апреля
+                    li.events__item 
+                        a(href="#!").events__link
+                            .events__image 
+                                img(src="img/content/event1.png" alt="Фото событий компании Bowlmania")
+                            .events__info 
+                                p Магазин тибетских чаш Bowls Mania на маркете «Delhi Базар» 21-23 апреля
+                    li.events__item 
+                        a(href="#!").events__link
+                            .events__image 
+                                img(src="img/content/event3.png" alt="Фото событий компании Bowlmania")
+                            .events__info 
+                                p Магазин тибетских чаш Bowls Mania на маркете «Delhi Базар» 21-23 апреля
+                    li.events__item 
+                        a(href="#!").events__link
+                            .events__image 
+                                img(src="img/content/event2.png" alt="Фото событий компании Bowlmania")
+                            .events__info 
+                                p Магазин тибетских чаш Bowls Mania на маркете «Delhi Базар» 21-23 апреля
+                    li.events__item 
+                        a(href="#!").events__link
+                            .events__image 
+                                img(src="img/content/event1.png" alt="Фото событий компании Bowlmania")
+                            .events__info 
+                                p Магазин тибетских чаш Bowls Mania на маркете «Delhi Базар» 21-23 апреля
+                button(type="button").events__button.intro__link Смотреть еще...
+            else
+                h2.events__title=options.title
+                .events__slider.swiper 
+                    ul.events__list.swiper-wrapper 
+                        li.events__item.swiper-slide 
+                            a(href="#!").events__link
+                                .events__image 
+                                    img(src="img/content/event1.png" alt="Фото событий компании Bowlmania")
+                                .events__info 
+                                    p Магазин тибетских чаш Bowls Mania на маркете «Delhi Базар» 21-23 апреля
+                        li.events__item.swiper-slide 
+                            a(href="#!").events__link
+                                .events__image 
+                                    img(src="img/content/event2.png" alt="Фото событий компании Bowlmania")
+                                .events__info 
+                                    p Магазин тибетских чаш Bowls Mania на маркете «Delhi Базар» 21-23 апреля
+                        li.events__item.swiper-slide 
+                            a(href="#!").events__link
+                                .events__image 
+                                    img(src="img/content/event3.png" alt="Фото событий компании Bowlmania")
+                                .events__info 
+                                    p Магазин тибетских чаш Bowls Mania на маркете «Delhi Базар» 21-23 апреля
+                        li.events__item.swiper-slide 
+                            a(href="#!").events__link
+                                .events__image 
+                                    img(src="img/content/event1.png" alt="Фото событий компании Bowlmania")
+                                .events__info 
+                                    p Магазин тибетских чаш Bowls Mania на маркете «Delhi Базар» 21-23 апреля
+                        li.events__item.swiper-slide 
+                            a(href="#!").events__link
+                                .events__image 
+                                    img(src="img/content/event2.png" alt="Фото событий компании Bowlmania")
+                                .events__info 
+                                    p Магазин тибетских чаш Bowls Mania на маркете «Delhi Базар» 21-23 апреля
+                        li.events__item.swiper-slide 
+                            a(href="#!").events__link
+                                .events__image 
+                                    img(src="img/content/event3.png" alt="Фото событий компании Bowlmania")
+                                .events__info 
+                                    p Магазин тибетских чаш Bowls Mania на маркете «Delhi Базар» 21-23 апреля
+                        li.events__item.swiper-slide 
+                            a(href="#!").events__link
+                                .events__image 
+                                    img(src="img/content/event1.png" alt="Фото событий компании Bowlmania")
+                                .events__info 
+                                    p Магазин тибетских чаш Bowls Mania на маркете «Delhi Базар» 21-23 апреля
+                .events__buttons
+                    .swiper-button-prev.events-swiper-button-prev
+                    .swiper-pagination.events-swiper-pagination
+                    .swiper-button-next.events-swiper-button-next

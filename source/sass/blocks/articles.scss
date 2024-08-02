@@ -1,0 +1,247 @@
+.articles {
+ 
+    &__content {
+        max-width: 1420px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+
+    &__title {
+        color: rgb(26, 26, 26);
+        font-family: Blinker, sans-serif;
+        font-size: 45px;
+        font-weight: 700;
+        line-height: 120%;
+        letter-spacing: 2%;
+        text-transform: uppercase;
+        margin: 0 0 40px 0;
+    }
+
+    &__item {
+        display: flex;
+        gap: 0 38px;
+        border: 1px solid rgb(224, 223, 223);
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+
+    &__info {
+        max-width: 912px;
+        width: 100%;
+    }
+
+    &__date {
+        color: rgb(128, 128, 128);
+        font-family: Blinker, sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 130%;
+        margin-bottom: 20px;
+    }
+
+    &__name {
+        color: rgb(26, 26, 26);
+        font-family: Blinker, sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 130%;
+    }
+
+    &__text {
+        color: rgb(26, 26, 26);
+        font-family: Blinker, sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 130%;
+        margin: 20px 0 40px;
+        letter-spacing: 1px;
+    }
+
+    &__link {
+        color: rgb(24, 44, 143);
+        font-family: Blinker, sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 130%;
+        letter-spacing: 2%;
+        transition: .3s;
+        display: inline-flex;
+        align-items: center;
+        gap: 0 20px;
+        padding-bottom: 20px;
+    }
+
+    &__link:hover {
+        color: rgb(12, 48, 207);
+        svg {
+            path {
+                fill: rgb(12, 48, 207);
+            }
+        }
+    }
+
+    &__all-link {
+        border-radius: 2px;
+        border: 1px solid #19357D;
+        max-width: 320px;
+        width: 100%;
+        color: #19357D;
+        font-family: Blinker, sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 140%;
+        text-transform: uppercase;
+        padding: 17px;
+        transition: .3s;
+        margin-bottom: 70px;
+        display: block;
+        text-align: center;
+    }
+
+    &__all-link:hover {
+        border: 1px solid rgb(12, 48, 207);
+        color: rgb(12, 48, 207);
+    }
+
+    &__list-mobile {
+        display: none;
+    }
+
+    @media screen and (max-width: 905px) {
+        &__content {
+            padding: 0 45px;
+            position: relative;
+        }
+
+        &__list {
+            display: none;
+        }
+
+        &__list-mobile {
+            display: flex;
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 10px 15px 10px;
+        }
+
+        &__img {
+            margin: 0 auto 10px;
+        }
+
+        &__slider {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            position: absolute;
+        }
+
+
+        .swiper-button-next:after,
+        .swiper-button-prev::after {
+            font-size: 15px;
+        }
+
+        .swiper-button-next::after {
+            padding-right: 20px;
+        }
+
+        .swiper-button-prev::after {
+            padding-left: 20px;
+        }
+        
+    }
+
+    @media screen and (max-width: 768px) {
+        &__title {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        &__mobile {
+            display: flex;
+            gap: 0 20px;
+        }
+
+        &__img {
+            max-width: 200px;
+        }
+
+        &__item {
+            margin-bottom: 0px;
+            flex-direction: column;
+            padding-bottom: 15px;
+        }
+
+        &__date-mobile {
+            max-width: 320px;
+        }
+
+        &__date,
+        &__name {
+            font-size: 20px;
+        }
+    
+        &__text {
+            font-size: 16px;
+        }
+
+        &__all-link {
+            margin-bottom: 60px;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        &__mobile {
+            display: block;
+            width: 100%;
+        }
+
+        &__img {
+            max-width: 100%;
+            margin: 0 0 10px 0;
+        }
+
+        &__date {
+            margin-bottom: 10px;
+        }
+
+        &__name {
+            font-size: 18px;
+        }
+
+        &__text {
+            margin: 10px 0 20px;
+        }
+    }
+
+    @media screen and (max-width: 390px) {
+        &__content {
+            padding: 0 35px;
+        }
+
+        &__title {
+            font-size: 24px;
+        }
+
+        &__all-link {
+            margin-bottom: 50px;
+        }
+
+        &__text {
+            font-size: 16px;
+        }
+    }
+    
+}

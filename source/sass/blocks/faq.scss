@@ -1,0 +1,168 @@
+.faq {
+    &__content {
+        max-width: 1280px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 50px 40px;
+    }
+
+    &__title {
+        color: rgb(255, 255, 255);
+        font-family: Raleway;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 130%;
+        margin: 0 0 20px;
+    }
+
+    &__text {
+        color: rgb(255, 255, 255);
+        font-family: Raleway;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 150%;
+        margin: 0 0 50px;
+        max-width: 585px;
+        width: 100%;
+    }
+
+    &__accordion {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__element {
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 10px;
+        box-shadow: inset 0px 0px 15px 0px rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(34px);
+        background: rgba(255, 255, 255, 0.05);
+        position: relative;
+        z-index: 1;
+        padding: 30px;
+    }
+
+    &__element::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 10px;
+        padding: 1px;
+        background: linear-gradient(to right, #6687FC 20%, #CA43AF 100%);
+        -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) content-box, -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        border: 0 solid transparent;
+        z-index: -1;
+    }
+
+    .faq__element.is-active .faq__info>p {
+        height: auto;
+    }
+
+    &__btn {
+        width: 100%;
+        color: rgb(255, 255, 255);
+        font-family: Raleway;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 130%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        text-align: left;
+        transition: .3s;
+    }
+
+    .faq__btn svg {
+        flex-shrink: 0;
+        transition: transform 0.3s ease;
+    }
+
+    .faq__element.is-active .faq__btn svg {
+        transform: rotate(-45deg);
+    }
+
+    .faq__info {
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease, padding 0.3s ease;
+        color: rgb(255, 255, 255);
+        font-family: Raleway;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 150%;
+        margin: 0;
+        max-width: 700px;
+    }
+
+
+    .faq__element.is-active .faq__info {
+        height: auto;
+        padding-top: 5px;
+        padding-bottom: 10px;
+    }
+
+    &__text-info {
+        margin: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+        &__content {
+            padding: 50px 45px;
+        }
+
+        &__title {
+            font-size: 32px;
+        }
+
+        &__text {
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+
+        &__btn {
+            font-size: 20px;
+        }
+
+        .faq__btn svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        &__text-info {
+            font-size: 16px;
+        }
+    }
+
+    @media screen and (max-width: 390px) {
+        &__content {
+            padding: 40px 35px;
+        }
+
+        &__title {
+            font-size: 28px;
+        }
+
+        &__text {
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .faq__element {
+            padding: 20px;
+        }
+
+        &__btn {
+            font-size: 18px;
+        }
+
+        &__text-info {
+            font-size: 14px;
+        }
+    }
+}

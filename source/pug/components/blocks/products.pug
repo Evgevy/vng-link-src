@@ -1,0 +1,58 @@
+mixin products(data)
+    -
+        const headerLinks = [
+            {
+                href: "#",
+                text: "Системы верхнего привода",
+                isActive: true
+            },
+            {
+                href: "#",
+                text: "Мобильные буровые установки"
+            },
+            {
+                href: "#",
+                text: "Буровые насосы"
+            },
+            {
+                href: "#",
+                text: "Запчасти и инструменты"
+            }
+        ]
+
+
+    section.section&attributes(attributes)
+        .container
+            .section__wrapper.section__wrapper_reset
+                .section__parts
+
+                    .section__integrations
+                        .section__heading
+                            +icon("icon-figure", 24, 28)
+                            h2.title.title--h2 Продукция
+                        ul.main-nav__sublist
+                            each item in headerLinks
+                                li.main-nav__subitem
+                                    a.main-nav__sublink(class={"main-nav__sublink_active" : item.isActive} href=item.href)!=item.text
+                                        +icon("icon-chevron-down", 16, 16)
+
+                    .section__link ссылка на yuotube
+                        a
+
+                    .section__catalog
+                        .section__about
+                            .section__photo
+                                +img("content/products", "about", "png", "158", "309", "image")
+                            .section__text
+                                if (data.type)
+                                    h3.section__t Мобильные буровые установки
+                                    p МБУ предназначены для разведки, бурения, капитального ремонта скважин. МБУ могут использоваться для зарезки боковых стволов в нефтяных и газовых скважинах, а также для добывающих скважин на нефтяных месторождениях.
+                                else
+                                    h3.section__t Системы верхнего привода
+                                    p Системы верхнего привода – высокотехнологическое и современное оборудование. Применение данного оборудования позволяет увеличить скорость бурения сложных скважин с высокой точностью прохождения ствола скважин, а также сократить непроизводственные затраты и повысить безопасность в процессе буровых работ.
+
+                        if (data.list)
+                            ul.section__two-columns
+                                each item in data.list
+                                    li
+                                        +card(item)

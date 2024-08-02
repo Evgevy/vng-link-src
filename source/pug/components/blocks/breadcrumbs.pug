@@ -1,0 +1,45 @@
+//- mixin breadcrumbs(data)
+//-   .breadcrumbs&attributes(attributes)
+//-     .container
+//-       ul.list-reset.breadcrumbs__list
+//-         each item in data.list
+//-           li.breadcrumbs__item
+//-             if (item.isActive)
+//-               span.breadcrumbs__link.is-active!=item.text
+//-             else
+//-               a.breadcrumbs__link(href=item.href)!=item.text
+//-             +icon("arrow-b", 10, 10)
+mixin breadcrumbs(data)
+  .breadcrumbs&attributes(attributes)
+    .container
+      ul.list-reset.breadcrumbs__list
+        each item, index in data.list
+          - var isLast = index === data.list.length - 1
+          li.breadcrumbs__item
+            if isLast
+              p.breadcrumbs__link= item.text
+            else if (item.isActive)
+              span.breadcrumbs__link.is-active!=item.text
+            else
+              a.breadcrumbs__link(href=item.href)!=item.text
+                //- +icon("home-icon", 17, 17)
+                //- <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                //- <path d="M6 16V8H11V16M1 5.6L8.5 0L16 5.6V14.4C16 14.8243 15.8244 15.2313 15.5118 15.5314C15.1993 15.8314 14.7754 16 14.3333 16H2.66667C2.22464 16 1.80072 15.8314 1.48816 15.5314C1.17559 15.2313 1 14.8243 1 14.4V5.6Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                //- </svg>
+            if !isLast
+              +icon("arrow-b", 10, 10)
+      //- ul.list-reset.breadcrumbs__list.breadcrumbs__list--black
+      //-    each item, index in data.list
+      //-     - var isLast = index === data.list.length - 1
+      //-     li.breadcrumbs__item
+      //-       if isLast
+      //-         p.breadcrumbs__link= item.text
+      //-       else if (item.isActive)
+      //-         span.breadcrumbs__link.is-active!=item.text
+      //-       else
+      //-         a.breadcrumbs__link(href=item.href)!=item.text
+      //-           //- +icon("home-icon", 17, 17)
+      //-           <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      //-           <path d="M6 17V9H11V17M1 6.6L8.5 1L16 6.6V15.4C16 15.8243 15.8244 16.2313 15.5118 16.5314C15.1993 16.8314 14.7754 17 14.3333 17H2.66667C2.22464 17 1.80072 16.8314 1.48816 16.5314C1.17559 16.2313 1 15.8243 1 15.4V6.6Z" stroke="#828282" stroke-linecap="round" stroke-linejoin="round"/>
+      //-           </svg>
+      //-       if !isLast

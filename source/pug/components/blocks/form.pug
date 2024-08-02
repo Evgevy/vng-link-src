@@ -1,0 +1,38 @@
+mixin form()
+    section.form 
+        .form__content 
+            .form__inner 
+                h2.form__title Оставьте заявку на бесплатную консультацию 
+                .form__columns
+                    form(method="post").form__form
+                        .form__box
+                            +custom-input({
+                                type: "text",
+                                name: "name",
+                                placeholder: "*Ваше имя"
+                            }).form__input
+                            +custom-input({
+                                type: "tel",
+                                name: "phone",
+                                placeholder: "*Ваш телефон"
+                            }).form__input
+                            +custom-input({
+                                type: "email",
+                                name: "email",
+                                placeholder: "*Ваш e-mail"
+                            }).form__input
+                        +custom-input({
+                            label: "Какой сайт Вам нужен",
+                            name: "question"
+                        }).form__input.form__input--mobile
+                        +custom-textarea({
+                            label: "Укажите Ваши задачи, особенности Вашего проекта, пожелания",
+                            name: "question"
+                        }).form__input-text
+                        p.form__text.form__text--mobile После заполнения формы с Вами свяжется наш специалист и проконсультирует по любым вопросам, связанным с разработкой сайта, в том числе по стоимости и срокам
+                        button(type="submit").form__btn Отправить
+                        p.form__agreement Нажимая на кнопку «Отправить»,  Вы соглашаетесь с <a href="#" class="form__sub-link">политикой обработки персональных данных</a>
+                    .form__answer 
+                        p.form__text После заполнения формы с Вами свяжется наш специалист и проконсультирует по любым вопросам, связанным с разработкой сайта, в том числе по стоимости и срокам
+                        .form__image 
+                            img(src="img/content/form.png")

@@ -1,0 +1,82 @@
+// Colors
+// ---------------------------------
+
+// Default
+
+$color-default-black:           #000000;
+$color-default-white:           #ffffff;
+$color-transparent:             rgba(255, 255, 255, 0);
+
+// Project palette
+// для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
+
+$color-tangerine:               #f28e06;
+$color-tangerine-2:             #ea8906;
+$color-lightning-yellow:        #faa633;
+$color-matterhorn:              #505050;
+$color-gray:                    #808080;
+$color-pink-swan:               #b8b6b6;
+$color-nero:                    #1a1a1a;
+$color-white-smoke:             #f5f5f5;
+$color-seal-brown:              #131313;
+
+$color-black-russian:           #10101d;
+$color-black-russian-2:         #2a2b30;
+$color-jaguar:                  #272733;
+$color-blue-zodiac:             #3d4050;
+$color-summer-sky:              #43abf0;
+$color-summer-sky-2:            #3e9cdc;
+$color-silver:                  #c3c3c3;
+$color-dolphin:                 #6f6d7b;
+
+// Gradient
+
+$black-to-right: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+
+// Typography
+// ---------------------------------
+
+// переменная используемая в html для подключения скейлинга
+$fz-default: 18px;
+
+$ff-blinker: "Blinker", "Arial", sans-serif;
+//$ff-arima-madurai: "Arima Madurai", "Arial", sans-serif;
+
+// Animation
+// ---------------------------------
+
+$tf-default:                        ease;
+$tf-ease-out:                       ease-out;
+$tf-ease-in:                        ease-in;
+$tf-ease-in-out:                    ease-in-out;
+$trans-default:                     0.3s $tf-default;
+$trans-ease-out:                    0.3s $tf-ease-out;
+$trans-ease-in:                     0.3s $tf-ease-in;
+$trans-ease-in-out:                 0.3s $tf-ease-in-out;
+
+// если требуется изинг отличный от $tf-default, то переменную называем не цифрой
+$trans-modal: 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+$trans-600:                         0.6s $tf-default;
+$trans-600-ease-out:                0.6s $tf-ease-out;
+$trans-600-ease-in-out:             0.6s $tf-ease-in-out;
+$trans-400-ease-in-out:             0.4s $tf-ease-in-out;
+
+// Viewports
+// ---------------------------------
+
+$vp-320:                            320px;
+$vp-375:                            375px;
+$vp-390:                            390px;
+$vp-768:                            768px;
+$vp-1024:                           1024px;
+$vp-1200:                           1200px;
+$vp-1280:                           1280px;
+$vp-1440:                           1440px;
+$vp-1920:                           1920px;
+
+// Retina
+// ---------------------------------
+
+$retina-dpi:                        144dpi;
+$retina-dppx:                       1.5dppx;

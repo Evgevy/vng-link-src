@@ -1,0 +1,263 @@
+.works {
+    overflow: hidden;
+    padding-bottom: 50px;
+
+    &__content {
+        max-width: 1280px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 50px 40px 0;
+    }
+
+    &__title {
+        color: rgb(255, 255, 255);
+        font-family: Raleway;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 130%;
+        margin: 0 0 20px;
+    }
+
+    &__text {
+        color: rgb(255, 255, 255);
+        font-family: Raleway;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 150%;
+        margin: 0 0 50px;
+        max-width: 700px;
+        width: 100%;
+    }
+
+    &__slider.swiper {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 40px;
+        position: relative;
+    }
+
+    .swiper-wrapper {
+        height: auto;
+    }
+
+
+    &__item.swiper-slide {
+        width: 500px;
+        height: 330px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__item.swiper-slide::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    &__item.swiper-slide-active::after {
+        background: transparent;
+    }
+
+    &__buttons {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 700px;
+        width: 100%;
+        margin: 0 auto;
+        bottom: 150px;
+    }
+
+    .swiper-button-next.swiper-button-next-works,
+    .swiper-button-prev.swiper-button-prev-works {
+        position: relative;
+        z-index: 15;
+        flex-shrink: 0;
+    }
+
+    .swiper-button-prev.swiper-button-prev-works {
+        transform: rotate(180deg);
+    }
+
+    .swiper-button-next.swiper-button-next-works::after,
+    .swiper-button-prev.swiper-button-prev-works::after {
+        content: '';
+        background-image: url(../img/sprite/arrow-left.svg);
+        background-size: cover;
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 20px;
+        z-index: 15;
+
+    }
+
+    .swiper-button-prev.swiper-button-prev-works::after {}
+
+    .works-swiper-pagination {
+        display: none;
+    }
+
+    .works__link.intro__link {
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: 1660px) {
+        &__buttons {
+            max-width: 870px;
+            bottom: 220px;
+        }
+
+        &__item.swiper-slide {
+            height: 450px;
+        }
+
+        // &__item.swiper-slide-active {
+        //     transform: scale(1.1);
+        // }
+    }
+
+    @media screen and (max-width: 1460px) {
+        &__buttons {
+            max-width: 750px;
+            bottom: 180px;
+        }
+
+        &__item.swiper-slide {
+            height: 350px;
+        }
+    }
+
+    @media screen and (max-width: 1240px) {
+        &__buttons {
+            max-width: 650px;
+            bottom: 150px;
+        }
+
+        &__item.swiper-slide {
+            height: 300px;
+        }
+    }
+
+    @media screen and (max-width: 1040px) {
+        &__buttons {
+            max-width: 550px;
+        }
+    }
+
+    @media screen and (max-width: 840px) {
+        &__buttons {
+            max-width: 450px;
+            bottom: 100px;
+        }
+
+        &__item.swiper-slide {
+            height: 200px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        &__content {
+            padding: 50px 45px 0;
+        }
+
+        &__title {
+            font-size: 32px;
+        }
+
+        &__text {
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+    }
+
+    @media screen and (max-width: 630px) {
+        &__buttons {
+            max-width: 400px;
+            bottom: 70px;
+        }
+
+        &__item.swiper-slide {
+            height: 150px;
+        }
+    }
+
+    @media screen and (max-width: 560px) {
+        &__buttons {
+            display: none;
+        }
+
+        &__slider.swiper {
+            padding: 0 45px;
+        }
+
+        &__item.swiper-slide {
+            height: 280px;
+        }
+
+        .works-swiper-pagination {
+            display: flex;
+            background: #57575B;
+            padding: 0 45px;
+            bottom: 0;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+            background-color: #A7BAFE;
+        }
+
+        .works__link.intro__link {
+            max-width: 80%;
+        }
+    }
+
+    @media screen and (max-width: 460px) {
+        &__item.swiper-slide {
+            height: 200px;
+        }
+    }
+
+    @media screen and (max-width: 390px) {
+        &__content {
+            padding: 40px 35px 0;
+        }
+
+        &__title {
+            font-size: 28px;
+        }
+
+        &__text {
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        &__slider.swiper {
+            margin-bottom: 30px;
+        }
+
+        &__item.swiper-slide {
+            height: 170px;
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+        &__item.swiper-slide {
+            height: 140px;
+        }
+    }
+}

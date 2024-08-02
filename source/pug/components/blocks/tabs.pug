@@ -1,0 +1,27 @@
+mixin tabs()
+    sextion.tabs
+        .tabs__content 
+            .view__tabs-box 
+                .view__tabs 
+                    button(type="button" data-tab="tab-1").view__tab-btn.view__tab-btn--active Specifications
+                    img(src="img/sprite/line2.svg")
+                    button(type="button" data-tab="tab-2").view__tab-btn Documentaion
+                .view__tab-info.view__tab-info--active(id="tab-1") 
+                    p.view__tab-text EQUIPMENT FEATURES：The CNC tube bending machine is driven by Y (feed), B (rotating tube), C (tube bending), and 3-axis electric servo drive. The above 3-axis electric servo drive, with precise cart servo angle, bending accuracy of 0.01°, and feed accuracy of 0.01mm. Electric servo drive avoids the defect that the accuracy of general tube bending machine depends on oil temperature, suitable for high load, mass production. We will contact to clarify the task and suggest the best options 
+    .view__tab-info(id="tab-2")
+        .view__parameters 
+            p.view__param-text MAIN TECHNICAL PARAMETERS:
+            .view__table 
+                .view__lvl
+                    .view__line.view__line--strong Technical specifications 
+                    .view__line.view__line--strong CNC-18RES 
+                .view__lvl 
+                    .view__line Max.bending capacity (carbon steel): 
+                    .view__line Φ18×1.6mm 
+                .view__lvl 
+                    .view__line Max.pipe diameter for reciprocating feed:
+                    .view__line Φ20mm
+                .view__lvl 
+                    .view__line Bending angle range:
+                    .view__line 190°
+                

@@ -1,0 +1,148 @@
+.category {
+    &__content {
+        max-width: 1420px;
+        padding: 0 40px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__title {
+        color: rgb(26, 26, 26);
+        font-family: Blinker, sans-serif;
+        font-size: 45px;
+        font-weight: 700;
+        line-height: 120%;
+        letter-spacing: 2%;
+        text-transform: uppercase;
+        margin: 0 0 40px 0;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+        gap: 40px;
+        margin-bottom: 70px;
+    }
+
+    &__item {
+        max-width: 680px;
+        width: 100%;
+        background: rgb(245, 245, 245);
+        transition: .3s;
+    }
+
+    &__item:hover {
+        box-shadow: -2px 4px 30px 5px rgba(151, 151, 151, 0.2);
+    }
+
+    &__item:hover > &__link {
+        color: rgb(12, 48, 207);
+        svg {
+            path {
+                fill: rgb(12, 48, 207);
+            }
+        }
+    }
+
+    &__img {
+        margin-bottom: 25px;
+    }
+
+    &__link {
+        //max-width: 365px;
+        //width: 100%;
+        color: rgb(24, 44, 143);
+        font-family: Blinker, sans-serif;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 130%;
+        letter-spacing: 2%;
+        text-transform: uppercase;
+        padding-left: 20px;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0 15px;
+        transition: .3s;
+        svg {
+            width: 57px;
+            height: 50px;
+            align-self: flex-end;
+        }
+    }
+
+
+    &__text {
+        color: rgb(26, 26, 26);
+        font-family: Blinker, sans-serif;
+        font-size: 18px;
+        line-height: 130%;
+        letter-spacing: 1px;
+        margin: 20px 0 73px;
+        padding: 0 53px 0 20px;
+    }
+
+    @media screen and (max-width: 1180px) {
+        &__list {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        &__content {
+            padding: 0 45px;
+        }
+
+        &__title {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        &__list {
+            margin: 0 0 120px;
+        }
+
+        &__link {
+            max-width: 100%;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        &__link {
+            display: grid;
+            grid-template-columns: 1fr 60px;
+            padding-right: 20px;
+        }
+    }
+
+    @media screen and (max-width: 390px) {
+        &__content {
+            padding: 0 35px;
+        }
+
+        &__title {
+            font-size: 24px;
+            
+        }
+
+        &__list {
+            margin: 0 0 100px;
+            gap: 30px;
+        }
+
+        &__link {
+            font-size: 22px;
+            width: 100%;
+        }
+
+        &__text {
+            font-size: 16px;
+            margin: 10px 0 30px 0;
+            padding: 0 20px;
+        }
+
+
+    }
+}

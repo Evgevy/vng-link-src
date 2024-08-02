@@ -1,0 +1,10 @@
+mixin application(data)
+	section.section&attributes(attributes)
+		.container
+			.section__wrapper
+				h3.section__title Применение
+				p.section__paragraph!=data.applicationValue
+				if (data.list)
+					ul
+						each item in data.list
+							li!=item

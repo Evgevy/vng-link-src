@@ -1,0 +1,109 @@
+.breadcrumbs {
+  width: 100%;
+  padding: 60px 0 10px;
+
+  /*@include vp-1023 {
+    padding: 30px 0 40px;
+  }
+
+  @include vp-767 {
+    padding: 20px 0 40px;
+  }*/
+
+  &--absolute {
+    z-index: 1;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    transition: .3s;
+
+    svg {
+      flex-shrink: 0;
+
+      width: 7px;
+      height: 7px;
+      margin: 0 7px;
+
+
+
+      color: white;
+    }
+
+    &:last-child {
+
+      svg {
+        display: none;
+      }
+    }
+  }
+
+  &__item:last-child>p {
+    color: rgb(255, 255, 255);
+    pointer-events: none;
+    margin: 0;
+  }
+
+  &__item:first-child>svg {
+    display: none;
+  }
+
+  a:hover>svg> {
+    path {
+      stroke: gold;
+    }
+  }
+
+  &__link {
+    color: rgb(255, 255, 255);
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 115.5%;
+    transition: color $trans-default;
+
+    svg {
+      width: 17px;
+      height: 17px;
+      margin: 0;
+    }
+
+    @include hover-focus {
+      color: gold;
+    }
+
+    @include active {
+      color: rgb(255, 255, 255);
+    }
+
+    &.is-active {
+      color: rgb(255, 255, 255);
+
+      pointer-events: none;
+    }
+  }
+
+  &__item:first-child>&__link::after {
+    content: url(../img/sprite/home-icon.svg);
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 50px 0 10px;
+  }
+
+  @media screen and (max-width: 390px) {
+    padding: 30px 0 10px;
+  }
+
+}

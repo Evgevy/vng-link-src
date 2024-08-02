@@ -1,0 +1,41 @@
+mixin section(data)
+  section.section&attributes(attributes)
+    if (data.background)
+      .section__background
+        img(src="img/content/bg.png")
+    .container
+      .section__wrapper
+        if (data.title)
+          .section__heading
+            +icon("icon-figure", 24, 28)
+            h2.title.title--h2.section__title!=data.title
+
+        if (data.content)
+          .section__content
+            if (data.content.text)
+              each item in data.content.text
+                p!=item
+            if (data.content.list)
+              ul
+                each item in data.content.list
+                  li!=item
+
+        if (data.button)
+          +btn({href: data.button.href, text: data.button.text}).section__button
+
+        if (data.list)
+          ul.list-reset.section__list
+            each item in data.list
+              li.section__item
+                if (item.type === "category")
+                  +category-card(item)
+                if (item.type === "advantage")
+                  +advantage-card(item)
+
+        if (data.form)
+          .section__form
+            +feedback({
+              title: "Хотите узнать больше?"
+            })
+     
+          +img("content", "frame", "png", "798", "309", "image")

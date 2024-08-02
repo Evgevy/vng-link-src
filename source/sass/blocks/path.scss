@@ -1,0 +1,106 @@
+.path {
+    &__content {
+        max-width: 1400px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 80px 40px;
+    }
+
+    &__title {
+        color: rgb(52, 52, 52);
+        font-family: OpenSans;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 130%;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+        margin: 0 0 50px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    &__list>li {
+        padding: 30px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__list>li>p {
+        color: rgb(255, 255, 255);
+        font-family: OpenSans;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 160%;
+        letter-spacing: 0%;
+        text-align: center;
+        text-transform: uppercase;
+        max-width: 530px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__list>li:nth-child(1),
+    &__list>li:nth-child(4) {
+        background: rgb(51, 91, 76);
+    }
+
+    &__list>li:nth-child(2),
+    &__list>li:nth-child(3) {
+        background: rgb(238, 192, 102);
+    }
+
+    &__list>li:nth-child(2)>p,
+    &__list>li:nth-child(3)>p {
+        color: rgb(52, 52, 52);
+    }
+
+    @media screen and (max-width: 920px) {
+        &__list {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        &__content {
+            padding: 50px 45px;
+        }
+
+        &__title {
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+    }
+
+    @media screen and (max-width: 670px) {
+        &__list>li>p {
+            font-size: 15px;
+        }
+    }
+
+    @media screen and (max-width: 390px) {
+        &__content {
+            padding: 40px 35px;
+        }
+
+        &__title {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        &__list {
+            gap: 20px;
+        }
+
+        &__list>li {
+            padding: 20px;
+        }
+
+        &__list>li>p {
+            font-size: 13px;
+        }
+    }
+}

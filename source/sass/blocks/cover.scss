@@ -1,0 +1,25 @@
+.cover {
+  position: relative;
+	margin-bottom: 80px;
+	background-color: #BFBFBF;
+	height: 372px;
+
+	&__background {
+		position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+		video {
+			width: 100%;
+			height: 372px;
+			object-fit: cover;
+		}
+	}
+
+  &__wrapper {
+    position: relative;
+  }
+}

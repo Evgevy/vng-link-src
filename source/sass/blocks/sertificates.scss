@@ -1,0 +1,127 @@
+.sertificates {
+    background-image: url(../img/content/group600.png);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &__content {
+        max-width: 1400px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 50px 40px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    &__info {
+        align-self: flex-end;
+        display: flex;
+        gap: 30px;
+
+        img {
+            align-self: flex-start;
+            width: 60px;
+            height: 60px;
+            flex-shrink: 0;
+        }
+
+        p {
+            align-self: flex-start;
+            color: rgb(52, 52, 52);
+            font-family: OpenSans;
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 130%;
+            margin: 0;
+            max-width: 510px;
+            width: 100%;
+        }
+    }
+
+    &__image {
+        margin-right: 50px;
+        width: 380px;
+        height: 500px;
+
+        img {
+            width: 100%;
+            height: 110%;
+            object-fit: cover;
+        }
+    }
+
+
+    @media screen and (max-width: 1380px) {
+        background-size: cover;
+        background-position: right -250px top 20px;
+    }
+
+    @media screen and (max-width: 1100px) {
+        background-size: 1900px;
+
+        &__inner {
+            flex-direction: column-reverse;
+            gap: 46px;
+        }
+
+        &__image {
+            align-self: flex-end;
+            height: auto;
+        }
+
+        &__info {
+            align-self: flex-start;
+            margin-left: 50px;
+
+            p {
+                font-size: 25px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        &__content {
+            padding: 50px 45px;
+        }
+
+        &__info>p {
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (max-width: 590px) {
+        &__image {
+            width: 100%;
+            margin: 0 auto
+        }
+
+        &__info {
+            margin: 0 auto;
+        }
+    }
+
+    @media screen and (max-width: 470px) {
+        background-size: 1590px;
+    }
+
+    @media screen and (max-width: 390px) {
+        background-size: 1590px 440px;
+
+        &__content {
+            padding: 40px 35px;
+        }
+
+        &__info>p {
+            font-size: 18px;
+        }
+
+    }
+
+    @media screen and (max-width: 360px) {
+        background-size: 2000px 350px;
+        background-position: right 0px top 30px;
+    }
+}

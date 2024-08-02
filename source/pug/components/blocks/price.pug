@@ -1,0 +1,51 @@
+mixin price()
+    section.price
+        .price__bg 
+            img(src="img/sprite/price-bgl.svg")
+        .price__content 
+            h2.price__title Сколько стоит разработка сайта
+            p.price__text Стоимость разработки сайта зависит от объема и сложности работ. Ниже приведена индикативная стоимость сайтов различных типов, включающая адаптивный дизайн под мобильные телефоны, планшеты и компьютеры. При необходимости мы можем добавить на сайт дополнительный функционал: анимации, формы записи, интеграции с CRМ, автоматическую загрузку контента и другие. Мы не делаем шаблонные сайты, поэтому дизайн сайта будет уникальным
+            .price__block 
+                ul.price__list 
+                    li.price__item 
+                        p Интернет-магазин
+                        span От 185 ооо ₽
+                    li.price__item 
+                        p Сайт компании
+                        span От 100 ооо ₽
+                    li.price__item 
+                        p Разработка Landing Page
+                        span От 30 ооо ₽
+                    li.price__item 
+                        p Доработка сайтов
+                        span От 30 ооо ₽
+                    li.price__item 
+                        p Техническая поддержка
+                        span От 25 ооо ₽
+                    li.price__item 
+                        p Поисковое продвижение SEO
+                        span От 12 ооо ₽
+                .price__form 
+                    .price__image 
+                        img(src="img/sprite/ellipses-group.svg")
+                    .price__form-form
+                        h3 Рассчитаем точную стоимость и ответим на все вопросы
+                        form(method="post")
+                            +custom-input({
+                                type: "text",
+                                name: "name",
+                                placeholder: "*Ваше имя"
+                            }).form__input
+                            +custom-input({
+                                type: "tel",
+                                name: "phone",
+                                placeholder: "*Ваш телефон"
+                            }).form__input.inner
+                            +custom-textarea({
+                                name: "question",
+                                placeholder: "Укажите Ваши задачи, особенности Вашего проекта, пожелания"
+                            }).form__input-text
+                            button(type="submit").price__btn.intro__link Отправить
+                            p.form__agreement Нажимая на кнопку «Отправить»,  Вы соглашаетесь с <a href="#" class="form__sub-link">политикой обработки персональных данных</a>
+        .price__bg 
+            img(src="img/sprite/price-bgr.svg")

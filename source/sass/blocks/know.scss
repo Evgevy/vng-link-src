@@ -1,0 +1,105 @@
+.know {
+    &__content {
+        max-width: 1420px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 70px 10px;
+    }
+
+    &__title {
+        color: rgb(26, 26, 26);
+        font-family: Blinker, sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 130%;
+        text-transform: uppercase;
+        margin: 0 0 40px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    &__item {
+        border: 1px solid rgb(217, 217, 217);
+        max-width: 320px;
+        width: 100%;
+        padding: 40px 18px;
+        box-sizing: border-box;
+    }
+
+    &__title-card {
+        color: rgb(24, 44, 143);
+        font-family: Blinker, sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 130%;
+        text-transform: uppercase;
+        margin: 0 0 20px;
+        max-width: 280px;
+        width: 100%;
+        text-align: center;
+        min-height: auto;
+    }
+
+    &__text {
+        color: rgb(26, 26, 26);
+        font-family: Blinker, sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 130%;
+        letter-spacing: 2%;
+        text-align: center;
+        margin: 0;
+        min-height: auto;
+    }
+
+    @media screen and (max-width: 768px) {
+        &__content {
+            padding: 70px 45px;
+        }
+
+        &__title {
+            font-size: 32px;
+            line-height: 120%;
+            margin-bottom: 30px;
+        }
+
+        &__list {
+           gap: 20px;
+        }
+
+        &__item {
+            padding: 30px 18px;
+        }
+
+        &__title-card {
+            font-size: 25px;
+        }
+    }
+
+    @media screen and (max-width: 390px) {
+        &__content {
+            padding: 50px 35px;
+        }
+
+        &__list {
+            gap: 30px;
+        }
+
+        &__item {
+            padding: 30px 18px;
+        }
+
+        &__title {
+            font-size: 24px;
+        }
+
+        &__title-card {
+            font-size: 22px;
+        }
+    }
+}

@@ -1,0 +1,359 @@
+.view {
+    &__content {
+        max-width: 1420px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 40px;
+        
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 70px;
+        gap: 20px;
+    }
+
+    &__title-mobile {
+        display: none;
+    }
+
+
+    .swiper-container {
+        width: 100%;
+        max-width: 560px;
+        overflow: hidden;
+        position: relative;
+        margin-left: 50px;
+    }
+
+    .swiper-slide {
+        max-width: 100%;
+    }
+
+    &__img {
+        margin: 0 auto;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: absolute;
+        z-index: 1;
+    }
+      
+    .swiper-button-next:after,
+    .swiper-button-prev::after {
+        font-size: 18px;
+    }
+      
+    .swiper-thumbs {
+        max-width: 100px;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .swiper-thumbs .swiper-wrapper {
+        transform: none !important;
+    }
+      
+    .swiper-thumbs .swiper-slide {
+        width: 100px;
+        cursor: pointer;
+    }
+
+      
+    .swiper-thumbs .swiper-slide img {
+        width: 100%;
+        object-fit: contain;
+    }
+      
+    .swiper-thumbs .swiper-slide-active {
+        border: 2px solid rgb(24, 44, 143);
+    }
+
+    &__title,
+    &__title-mobile {
+        color: rgb(26, 26, 26);
+        font-family: Blinker, sans-serif;
+        font-size: 45px;
+        font-weight: 700;
+        line-height: 130%;
+        text-transform: uppercase;
+        margin: 0 0 30px;
+        max-width: 635px;
+        width: 100%;
+    }
+
+    &__text {
+        color: rgb(26, 26, 26);
+        font-family: Blinker, sans-serif;
+        font-size: 20px;
+        line-height: 180%;
+        margin: 0 0 40px;
+        max-width: 400px;
+        width: 100%;
+    }
+
+    &__btn {
+        border-radius: 2px;
+        background: rgb(24, 44, 143);
+        color: rgb(255, 255, 255);
+        max-width: 320px;
+        width: 100%;
+        padding: 17px;
+        font-family: Blinker, sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 140%;
+        text-transform: uppercase;
+        transition: .3s;
+    }
+
+    &__btn:hover {
+        background: rgb(12, 48, 207);
+    }
+
+    &__small-text {
+        color: rgb(128, 128, 128);
+        font-family: Blinker, sans-serif;
+        font-size: 16px;
+        line-height: 140%;
+        margin: 20px 0 0;
+        max-width: 335px;
+        width: 100%;
+    }
+    
+    &__tabs-box {
+        background: rgb(245, 245, 245);
+    }
+
+    &__tabs {
+        display: flex;
+        gap: 0 25px;
+        align-items: center;
+        padding: 50px 10px;
+        max-width: 1420px;
+        margin: 0 auto 40px;
+    }
+
+    &__tab-btn {
+        color: rgb(128, 128, 128);
+        font-family: Blinker, sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 130%;
+        &--active {
+            color: rgb(24, 44, 143);
+            pointer-events: none;
+        }
+    }
+
+    &__tab-btn:hover {
+        color: rgb(12, 48, 207);
+    }
+
+    &__tab-btn:active {
+        color: rgb(24, 44, 143);
+    }
+
+    &__tab-inner {
+        max-width: 1420px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    &__tab-info {
+        display: none;
+        
+        &--active {
+            display: block;
+        }
+    }
+
+    #tab-2 {
+        outline: none;
+    }
+
+    &__tab-text {
+        color: rgb(26, 26, 26);
+        font-family: Blinker, sans-serif;
+        font-size: 18px;
+        line-height: 200%;
+        margin: 0 0 70px;
+    }
+
+    &__param-text {
+        color: rgb(26, 26, 26);
+        font-family: Blinker, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 130%;
+        margin: 0 0 40px;
+    }
+
+    &__table {
+        display: inline-flex;
+        flex-direction: column;
+        margin-bottom: 70px;
+        max-width: 720px;
+        width: 100%;
+    }
+
+    &__lvl {
+        display: inline-flex;
+    }
+
+    &__line {
+        border:  1px solid rgb(217, 217, 217);
+        padding: 13px 20px;
+        margin: 0;
+        max-width: 360px;
+        width: 100%;
+    }
+
+    @media screen and (max-width: 1024px) {
+        &__inner {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        &__title-mobile {
+            display: block;
+            max-width: 100%;
+            margin: 0;
+        }
+
+        .swiper-container {
+           margin: 0 auto;
+        }
+
+        .swiper-thumbs {
+            margin-top: 40px;
+        }
+
+        &__title {
+            display: none;
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__btn {
+            order: -1;
+            max-width: 100%;
+        }
+
+        &__text {
+            margin: 30px 0 0;
+        }
+
+        &__small-text {
+            order: -1;
+            max-width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+    
+        &__content {
+            padding: 0 45px;
+        }
+
+        &__title-mobile {
+            font-size: 32px;
+            line-height: 120%;
+        }
+
+        &__text {
+           font-size: 18px;
+        }
+        
+        &__tabs {
+            padding: 50px 45px;
+        }
+
+        &__tab-inner {
+            padding: 0 45px;
+            margin-bottom: 20px;
+        }
+
+        &__parameters {
+            overflow-x: auto;
+            white-space: nowrap;
+            max-width: 100%;
+        }
+
+        
+
+        &__lvl {
+            display: grid;
+            grid-template-columns: 333px 290px;
+        }
+
+        
+
+        #tab-2 {
+          width: 100%;
+            
+        }
+    
+    }
+
+    @media screen and (max-width: 500px) {
+        &__tabs > img {
+            display: none;
+        }
+
+        &__tabs {
+            flex-direction: column-reverse;
+            align-items: start;
+            gap: 13px;
+        }
+
+        &__tab-btn:last-child {
+            border-bottom: 0.3px solid rgb(128, 128, 128);
+            width: 100%;
+            text-align: left;
+            padding-bottom: 12px;
+        }
+
+    }
+
+    @media screen and (max-width: 390px) {
+        &__content {
+            padding: 0 35px;
+        }
+        
+        &__title-mobile {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .swiper-thumbs {
+            max-width: 70px;
+        }
+
+        .swiper-button-prev {
+            padding-right: 18px;
+        }
+        .swiper-button-next {
+            padding-left: 18px;
+        }
+
+        &__tab-btn {
+            font-size: 24px;
+        }
+
+        &__tab-text {
+            font-size: 16px;
+        }
+
+
+    }
+    
+}

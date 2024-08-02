@@ -1,0 +1,25 @@
+.block {
+
+	&__title {
+		margin: 0;
+
+		@include vp-1439 {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__paragraph {
+		font-weight: 600;
+	}
+
+	&__list {
+		margin-top: 20px;
+		padding-left: 10px;
+
+		li {
+			&::marker {
+				content: "- ";
+			}
+		}
+	}
+}

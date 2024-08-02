@@ -1,0 +1,225 @@
+.how {
+    overflow: hidden;
+
+    &__content {
+        max-width: 1280px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 50px 40px;
+    }
+
+    &__title {
+        color: rgb(255, 255, 255);
+        font-family: Raleway;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 130%;
+        margin: 0 0 50px;
+    }
+
+    &__block {
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: flex-start;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    &__image {
+        width: 390px;
+        height: 420px;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 50px;
+        counter-reset: item 0;
+    }
+
+    &__item {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 0.7fr 1fr;
+        position: relative;
+        padding-bottom: 15px;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: transform 1s ease, opacity 1s ease;
+    }
+
+    .how__item.visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    &__item::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        background: #9fb4ff;
+        left: 80px;
+        width: 90%;
+        bottom: 0;
+    }
+
+    h3 {
+        color: rgb(255, 255, 255);
+        font-family: Raleway;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 130%;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    h3:before {
+        content: '' counter(item, decimal-leading-zero);
+        counter-increment: item;
+        font-family: Raleway;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 150%;
+    }
+
+    &__item:nth-of-type(1)>h3:before {
+        color: rgb(229, 82, 200);
+    }
+
+    &__item:nth-of-type(2)>h3:before {
+        color: rgb(234, 136, 214);
+    }
+
+    &__item:nth-of-type(3)>h3:before {
+        color: rgb(218, 171, 255);
+    }
+
+    &__item:nth-of-type(4)>h3:before {
+        color: rgb(159, 180, 255);
+    }
+
+    p {
+        color: rgb(255, 255, 255);
+        font-family: Raleway;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+        margin: 0;
+    }
+
+    @media screen and (max-width: 1024px) {
+        &__image {
+            width: 360px;
+            height: 380px;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__item::before {
+            width: 85%;
+        }
+    }
+
+    @media screen and (max-width: 990px) {
+        &__image {
+            display: none;
+        }
+
+        &__block {
+            grid-template-columns: 1fr;
+        }
+
+        &__list {
+            width: 100%;
+        }
+
+        &__item::before {
+            width: 90%;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        &__content {
+            padding: 50px 45px;
+        }
+
+        &__title {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        &__item {
+            padding-bottom: 30px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (max-width: 590px) {
+        &__list {
+            gap: 20px;
+        }
+
+        &__item {
+            grid-template-columns: 1fr;
+        }
+
+        &__item::before {
+            width: 100%;
+            left: 0;
+        }
+
+        h3 {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        h3:before {
+            margin-right: auto;
+        }
+
+        br {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 390px) {
+        &__content {
+            padding: 40px 35px;
+        }
+
+        &__title {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        &__item {
+            gap: 10px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+}

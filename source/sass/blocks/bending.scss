@@ -1,0 +1,92 @@
+.bending {
+    &__content {
+        max-width: 1420px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        margin: 0 0 70px 0;
+        gap: 0 60px;
+    }
+
+    &__info {
+        max-width: 662px;
+        width: 100%;
+        text-align: right;
+    }
+
+    &__title {
+        color: rgb(26, 26, 26);
+        font-family: Blinker, sans-serif;
+        font-size: 45px;
+        font-weight: 700;
+        line-height: 120%;
+        letter-spacing: 2%;
+        text-transform: uppercase;
+        margin: 0 0 40px 0;
+    }
+
+    &__text {
+        color: rgb(26, 26, 26);
+        font-family: Blinker, sans-serif;
+        font-size: 18px;
+        line-height: 130%;
+        letter-spacing: 1px;
+        margin: 0;
+    }
+
+    @media screen and (max-width: 1024px) {
+        &__inner {
+            gap: 10px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        &__content {
+            padding: 0 45px;
+        }
+
+        &__inner {
+            flex-direction: column-reverse;
+            margin-bottom: 30px;
+        }
+
+        &__images {
+            width: 750px;
+            max-width: 100%;
+            object-fit: cover;
+        }
+
+        &__info {
+            max-width: 100%;
+            text-align: left;
+        }
+    
+
+        &__title {
+            font-size: 32px;
+            margin: 0 0 30px 0;
+        }
+
+    }
+
+    @media screen and (max-width: 390px) {
+        
+        &__content {
+            padding: 0 35px;
+        }
+
+        &__title {
+            font-size: 24px;
+        }
+
+        &__text {
+            font-size: 16px;
+        }
+        
+    }
+}

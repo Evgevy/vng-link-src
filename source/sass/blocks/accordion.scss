@@ -1,0 +1,20 @@
+.accordion {
+  height: 275px;
+  
+  &__element {
+
+  }
+
+  &__button {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__content {
+
+  }
+
+  &__wrapper {
+
+  }
+}

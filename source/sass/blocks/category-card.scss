@@ -1,0 +1,113 @@
+.category-card {
+  position: relative;
+  display: flex;
+  height: 100%;
+  min-height: 269px;
+
+  @include hover-focus {
+    .category-card__button {
+      color: $color-lightning-yellow;
+
+      svg {
+        color: $color-lightning-yellow;
+      }
+    }
+  }
+
+  @include active {
+    .category-card__button {
+      color: $color-tangerine-2;
+
+      svg {
+        color: $color-tangerine-2;
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 6px;
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      border-radius: 6px;
+      background-color: rgba($color-default-black, 0.3);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      border-radius: 6px;
+
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 80px 24px 40px;
+  }
+
+  &__title {
+    max-width: 270px;
+    margin: 0 0 60px;
+
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+
+    color: $color-default-white;
+
+    @include vp-767 {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    margin: auto 0 0;
+
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+
+    color: $color-default-white;
+
+    cursor: pointer;
+    user-select: none;
+
+    transition: color $trans-default;
+
+    svg {
+      flex-shrink: 0;
+
+      width: 44px;
+      height: 16px;
+      margin: 0 0 0 10px;
+
+      color: $color-default-white;
+
+      transition: color $trans-default;
+    }
+  }
+}

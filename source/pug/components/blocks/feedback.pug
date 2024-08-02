@@ -1,0 +1,22 @@
+mixin feedback(data)
+  .feedback
+    h2.feedback__title Complete the form to get the consultation
+    p.feedback__description Submit a request and we will offer several options to solve your problem, tell you about machines in stock and purchasing options
+    form(method="post")
+      +custom-input({
+        label: "Your Name",
+        type: "text",
+        name: "name"
+      }).feedback__input
+      +custom-input({
+        label: "Phone number",
+        type: "tel",
+        name: "phone"
+      }).feedback__input
+      +custom-textarea({
+        label: "Your question",
+        name: "question"
+      }).feedback__input
+      +btn({type: "submit", text: "submit"}).feedback__button
+      p.feedback__agreement By clicking on the «Submit» button, you agree with the personal data processing policy
+

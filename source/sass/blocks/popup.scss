@@ -1,0 +1,137 @@
+.popup {
+    padding: 50px 20px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    &--hide {
+        display: none;
+    }
+    
+    &__content {
+        max-width: 520px;
+        //height: 700px; 
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 9999;
+        background: rgb(255, 255, 255);
+        padding: 10px 20px;
+    }
+
+    &__background {
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        width: 100%;
+        min-height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 999;
+    }
+
+    &__close {
+        display: flex;
+        justify-content: end;
+        cursor: pointer;
+    }
+
+    &__close:hover {
+        svg {
+            path {
+                stroke:  rgb(24, 44, 143);
+            }
+        }
+    }
+
+    &__title {
+        color: rgb(0, 0, 0);
+        font-family: Blinker, sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 130%;
+        margin: 0 0 10px 0;
+    }
+
+    &__text {
+        color: rgb(0, 0, 0);
+        font-family: Blinker, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0 0 20px 0; 
+    }
+
+    
+    .form__agreement {
+        margin-bottom: 0;
+        color: rgb(26, 26, 26);
+        font-family: Blinker, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 140%;
+        margin: 0 0 20px 0;
+    }
+
+    .custom-input input, .custom-input__label,
+    .custom-textarea textarea, .custom-textarea__label {
+        color: rgb(26, 26, 26);
+        background: transparent;
+        font-family: Blinker, sans-serif !important;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 110%;
+        display: inline-block !important;
+    }
+
+    .custom-input input,
+    .custom-textarea textarea {
+        background: rgb(243, 243, 243) !important;
+    }
+
+    .custom-input input {
+        height: 50px !important;
+    }
+
+    .custom-textarea textarea {
+        height: 130px;
+    }
+
+    .form__btn {
+        border-radius: 2px;
+        background: rgb(24, 44, 143);
+        max-width: 440px;
+        width: 100%;
+        color: rgb(255, 255, 255);
+        font-family: Blinker, sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 140%;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+    }
+
+    @media screen and (max-width: 768px) {
+        &__content {
+            max-width: 680px;
+        }
+
+        .form__btn {
+            max-width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 390px) {
+        &__content {
+            max-width: 320px;
+        }
+    }
+
+    
+    
+    
+    
+}

@@ -1,0 +1,223 @@
+.team {
+    overflow: hidden;
+
+    &__content {
+        max-width: 1400px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 80px 40px;
+    }
+
+    &__title {
+        color: rgb(52, 52, 52);
+        font-family: OpenSans;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 130%;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+        margin: 0 0 50px;
+    }
+
+    &__slider {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__list.swiper-wrapper {
+        height: auto;
+    }
+
+    &__item-content {
+        display: flex;
+        gap: 50px;
+    }
+
+    &__image {
+        width: 480px;
+        height: 555px;
+        flex-shrink: 0;
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__info {
+        max-width: 780px;
+        width: 100%;
+    }
+
+    &__name {
+        color: rgb(52, 52, 52);
+        font-family: OpenSans;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+        margin: 0 0 50px;
+        border-radius: 2px;
+        background: rgb(255, 237, 209);
+        display: inline-block;
+        padding: 9px 30px;
+    }
+
+    &__info>p {
+        color: rgb(52, 52, 52);
+        font-family: OpenSans;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+        margin: 0 0 20px;
+    }
+
+    &__info>p:last-child {
+        margin-bottom: 0;
+    }
+
+    .swiper-buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 800px;
+        height: 30px;
+        z-index: 10;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding-left: 530px;
+    }
+
+    .swiper-button-prev.swiper-button-prev-team,
+    .swiper-button-next.swiper-button-next-team {
+        position: relative;
+        z-index: 10;
+        flex-shrink: 0;
+    }
+
+    .swiper-button-prev.swiper-button-prev-team::after,
+    .swiper-button-next.swiper-button-next-team::after {
+        content: '';
+        background-image: url(../img/sprite/arrow-left.svg);
+        background-size: cover;
+        width: 29px;
+        height: 20px;
+        position: absolute;
+        z-index: 10;
+        display: block;
+    }
+
+
+    .swiper-button-next.swiper-button-next-team::after {
+        transform: rotate(180deg);
+    }
+
+    .swiper-pagination.team-swiper-pagination {
+        position: static;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 9px;
+        border: 1px solid rgb(189, 189, 189);
+        background: rgb(255, 255, 255);
+        margin: 0 !important;
+    }
+
+    .swiper-pagination-bullet-active {
+        width: 10px;
+        height: 9px;
+        background: rgb(51, 91, 76);
+        border: 1px solid transparent;
+    }
+
+    @media screen and (max-width: 910px) {
+        &__item-content {
+            gap: 30px;
+        }
+
+        &__image {
+            width: 350px;
+            height: 400px;
+        }
+
+        &__name {
+            margin-bottom: 30px;
+        }
+
+        .swiper-buttons {
+            padding-left: 380px;
+            width: 620px;
+        }
+    }
+
+    @media screen and (max-width: 790px) {
+        &__item-content {
+            flex-direction: column;
+        }
+
+        .swiper-buttons {
+            position: static;
+            padding-left: 0px;
+            max-width: 240px;
+            width: 100%;
+            height: 30px;
+            z-index: 10;
+            margin: 40px auto 0;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        &__content {
+            padding: 50px 45px;
+        }
+
+        &__title {
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+    }
+
+    @media screen and (max-width: 390px) {
+        &__content {
+            padding: 40px 35px;
+        }
+
+        &__title {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        &__info {
+            max-width: 100%;
+        }
+
+        &__name {
+            width: 100%;
+            padding: 9px 10px;
+            text-align: center;
+        }
+
+        &__item-content {
+            gap: 20px;
+        }
+
+        &__image {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 330px) {
+        &__name {
+            font-size: 16px;
+        }
+    }
+
+
+}

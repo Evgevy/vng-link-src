@@ -1,0 +1,8 @@
+mixin description(data)
+	section.section&attributes(attributes)
+		.container
+			.section__wrapper
+				h3.section__title Описание
+				p.section__paragraph!= data.descriptionValueFirst
+				if (data.descriptionValueSecond)
+					p.section__paragraph!= data.descriptionValueSecond

@@ -1,0 +1,25 @@
+mixin base-block(options)
+    - const titleClass = options.specClass ? options.specClass : ''
+    - const imageClass = options.specImage ? options.specImage : ''
+    - const contentClass = options.specContent ? options.specContent : ''
+    section.base-block
+        +breadcrumbs({
+                isStatic: true,
+                list: [
+                    {
+                        href: "#"
+                    },
+                    {
+                        text: options.last
+                    }
+
+                ]
+            })
+        .base-block__content(class=options.contentClass) 
+            if options.base
+                .base-block__inner(class=titleClass) 
+                    h1.base-block__title!=options.baseTitle 
+                    a(href="").base-block__link.intro__link записаться
+            if options.baseImage
+                .base-block__image(class=options.imageClass) 
+                    img(src=options.image)

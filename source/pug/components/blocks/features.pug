@@ -1,0 +1,24 @@
+mixin features()
+  section.section&attributes(attributes)
+    .container
+      .section__wrapper
+        .section__columns
+          .section__info
+            .section__heading
+              +icon("icon-figure", 24, 28)
+              h2.title.title--h2.section__title Почему выбирают нас?
+            .section__content
+              p Основанная в&nbsp;июне 2017&nbsp;года, ООО &laquo;СН-РУС СЕРВИС&raquo; является предприятием, занимающимся производством, продажей, техническим обслуживанием специального оборудования для бурения нефтяных и&nbsp;газовых скважин.
+              p В&nbsp;настоящее время компания, на&nbsp;основании многолетнего опыта, наша компания производит:
+              ul
+                li Cистемы верхнего привода переменного и&nbsp;постоянного тока
+                li Буровые насосы и&nbsp;мобильные буровые установки
+                li Запасные части к&nbsp;любому буровому оборудованию
+          +btn({href: "#", text: "Узнать подробнее"}).section__button
+          .section__gallery
+            .section__image
+              +img("content/features", "image-1", "webp", "439", "244", "image")
+            .section__image
+              +img("content/features", "image-3", "webp", "439", "244", "image")
+            .section__image
+              +img("content/features", "image-2", "webp", "321", "535", "image")

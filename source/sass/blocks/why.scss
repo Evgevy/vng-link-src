@@ -1,0 +1,206 @@
+.why {
+    position: relative;
+    overflow: hidden;
+
+    &__bg {
+        position: absolute;
+    }
+
+    &__bg:first-child {
+        width: 870px;
+        height: 470px;
+        top: 0;
+        z-index: -1;
+    }
+
+    &__bg:last-child {
+        width: 870px;
+        height: 230px;
+        right: -100px;
+        top: 0;
+        z-index: -1;
+    }
+
+    &__content {
+        max-width: 1280px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 50px 40px;
+    }
+
+    &__title {
+        color: rgb(255, 255, 255);
+        font-family: Raleway;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 130%;
+        margin: 0 0 50px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    // &__item {
+    //     position: relative;
+    //     padding: 30px;
+    //     transition: .3s;
+    // }
+
+
+
+    // &__item:hover {
+    //     box-shadow: 0 7px 50px 10px #000000aa;
+    //     transform: scale(1.015);
+    //     filter: brightness(1.3);
+    // }
+
+    // &__item:hover::before {
+    //     filter: brightness(.5);
+    //     top: -100%;
+    //     left: 200%;
+    // }
+
+    .why__item {
+        position: relative;
+        padding: 30px;
+        transition: .5s;
+        border-radius: 10px;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -150%;
+            width: 300%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(45deg);
+            transition: .5s all;
+            filter: brightness(1);
+            opacity: 0;
+        }
+
+        &:hover {
+            box-shadow: 0 7px 50px 10px #000000aa;
+            transform: scale(1.04);
+            filter: brightness(1.3);
+
+            &::before {
+                opacity: 1;
+                left: 150%;
+                transition: .5s all ease-in-out;
+            }
+        }
+    }
+
+    &__item::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 10px;
+        padding: 1px;
+        background: linear-gradient(to right, #6687FC 20%, #CA43AF 100%);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        border: 0 solid transparent;
+    }
+
+    h3 {
+        color: rgb(255, 255, 255);
+        font-family: Raleway;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 130%;
+        margin: 0 0 10px;
+    }
+
+    p {
+        color: rgb(255, 255, 255);
+        font-family: Raleway;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 150%;
+        margin: 0;
+    }
+
+    @media screen and (max-width: 990px) {
+        &__list {
+            gap: 20px;
+        }
+
+        .why__item {
+            position: relative;
+            padding: 30px;
+            transition: .5s;
+            border-radius: 10px;
+            overflow: hidden;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: -150%;
+                width: 350%;
+                height: 40%;
+                background: rgba(255, 255, 255, 0.3);
+                transform: rotate(45deg);
+                transition: .3s all;
+                filter: brightness(1);
+                opacity: 0;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        &__content {
+            padding: 50px 45px;
+        }
+
+        &__title {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        &__item {
+            padding: 20px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    @media screen and (max-width: 650px) {
+        &__list {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media screen and (max-width: 390px) {
+        &__content {
+            padding: 40px 35px;
+        }
+
+        &__title {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+}

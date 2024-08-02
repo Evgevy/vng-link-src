@@ -1,0 +1,198 @@
+.buy {
+    background: #FBFBFB;
+    &__content {
+        max-width: 1420px;
+        width: 100%;
+        margin: 0 auto 70px;
+        padding: 70px 40px;
+    }
+
+    &__title {
+        color: rgb(26, 26, 26);
+        font-family: Blinker, sans-serif;
+        font-size: 45px;
+        font-weight: 700;
+        line-height: 120%;
+        letter-spacing: 2%;
+        text-transform: uppercase;
+        margin: 0 0 40px 0;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin: 0 0 50px 0;
+    }
+
+    &__item {
+        max-width: 320px;
+        width: 100%;
+        box-shadow: 1px 1px 15px 9px rgba(133, 126, 126, 0.1);
+        background: rgb(255, 255, 255);
+        padding: 20px;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    &__item:hover {
+        transform: translateY(-5px);
+    }
+
+    &__item:hover > button {
+        background: rgb(29, 54, 175);
+    }
+
+    &__img {
+        width: 280px;
+        margin: 0 auto;
+    }
+
+    &__title-item {
+        color: rgb(26, 26, 26);
+        font-family: Blinker, sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 130%;
+        margin: 22px 0 10px;
+        min-height: 60px;
+    }
+
+    &__list-card {
+        margin-bottom: 40px;
+        min-height: 90px;
+    }
+
+    &__text {
+        color: rgb(128, 128, 128);
+        font-family: Blinker, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 140%;
+        margin: 0 0 5px 0;
+    }
+
+    &__item-btn {
+        border-radius: 2px;
+        background: rgb(24, 44, 143);
+        width: 100%;
+        color: rgb(255, 255, 255);
+        font-family: Blinker, sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 140%;
+        letter-spacing: 2%;
+        text-transform: uppercase;
+        padding: 17px;
+        transition: .3s;
+    }
+
+    &__more-link {
+        border-radius: 2px;
+        border: 1px solid #19357D;
+        max-width: 320px;
+        width: 100%;
+        color: #19357D;
+        font-family: Blinker, sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 140%;
+        text-transform: uppercase;
+        padding: 17px;
+        transition: .3s;
+        display: block;
+        text-align: center;
+        
+    }
+
+    &__more-link:hover {
+        border: 1px solid rgb(12, 48, 207);
+        color: rgb(12, 48, 207);
+    }
+
+    &__list-mobile {
+        display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+        &__content {
+            position: relative;
+            margin: 0 auto 60px;
+            padding: 60px 45px;
+        }
+
+        &__title {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        &__slider {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 30px;
+            padding: 10px;
+        }
+
+        &__list {
+            display: none;
+        }
+
+        &__list-mobile {
+            display: flex;
+        }
+
+        &__title-item {
+            min-height: 85px;
+        }
+
+        &__list-card {
+            min-height: 105px;
+        }
+
+        .swiper-button-prev-two,
+        .swiper-button-next-two {
+            content: '';
+            background-image: url(../img/sprite/b-slider.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 10px;
+            height: 20px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            z-index: 1;
+        }
+
+        .swiper-button-prev-two {
+            left: 20px;
+        }
+
+        .swiper-button-next-two {
+            right: 20px;
+        }
+
+        .swiper-button-prev-two {
+            transform: rotate(180deg);
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        &__item {
+            max-width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 390px) {
+        &__content {
+            padding: 50px 35px;
+        }
+
+        &__title {
+            font-size: 24px;
+        }
+    }
+
+    
+}
