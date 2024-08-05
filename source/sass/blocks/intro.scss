@@ -35,16 +35,186 @@
     position: relative;
   }
 
-  &__gif {
+  &__gif-content {
+    display: flex;
     position: absolute;
-    bottom: 50px;
-    right: -75px;
+    right: 0;
+    bottom: -150px;
     z-index: 1;
+  }
 
-    img {
-      max-width: 100%;
-      height: auto;
+  @keyframes rotateAnimation {
+    0% {
+      transform: rotate(38deg);
     }
+
+    25% {
+      transform: rotate(-60deg);
+    }
+
+    50% {
+      transform: rotate(-138deg);
+    }
+
+    75% {
+      transform: rotate(150deg);
+    }
+
+    100% {
+      transform: rotate(38deg);
+    }
+  }
+
+  .intro__gif1 img {
+    animation: rotateAnimation 10s linear infinite;
+  }
+
+  @keyframes rotateAnimation1 {
+    0% {
+      transform: rotate(-37deg);
+    }
+
+    25% {
+      transform: rotate(15deg);
+    }
+
+    50% {
+      transform: rotate(120deg);
+    }
+
+    75% {
+      transform: rotate(150deg);
+    }
+
+    100% {
+      transform: rotate(-37deg);
+    }
+  }
+
+  .intro__gif2 img {
+    animation: rotateAnimation1 10s linear infinite;
+  }
+
+  @keyframes rotateAnimation2 {
+    0% {
+      transform: rotate(-30deg);
+    }
+
+    25% {
+      transform: rotate(-0deg);
+    }
+
+    50% {
+      transform: rotate(30deg);
+    }
+
+    75% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(-30deg);
+    }
+  }
+
+  .intro__gif3 img {
+    animation: rotateAnimation2 10s linear infinite;
+  }
+
+  &__gif-block {
+    position: relative;
+    top: -200px;
+    z-index: 1;
+  }
+
+  &__gif4 {
+    position: absolute;
+    top: -10px;
+    z-index: 1;
+  }
+
+  &__gif6 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  @keyframes rotateAnimation3 {
+    0% {
+      transform: rotate(-37deg);
+    }
+
+    25% {
+      transform: rotate(-105deg);
+    }
+
+    50% {
+      transform: rotate(150deg);
+    }
+
+    75% {
+      transform: rotate(75deg);
+    }
+
+    100% {
+      transform: rotate(-37deg);
+    }
+  }
+
+  .intro__gif4 img {
+    animation: rotateAnimation3 10s linear infinite;
+  }
+
+  @keyframes rotateAnimation4 {
+    0% {
+      transform: rotate(-39deg);
+    }
+
+    25% {
+      transform: rotate(60deg);
+    }
+
+    50% {
+      transform: rotate(135deg);
+    }
+
+    75% {
+      transform: rotate(-150deg);
+    }
+
+    100% {
+      transform: rotate(-39deg);
+    }
+  }
+
+  .intro__gif5 img {
+    animation: rotateAnimation4 10s linear infinite;
+  }
+
+  @keyframes rotateAnimation5 {
+    0% {
+      transform: rotate(-14deg);
+    }
+
+    25% {
+      transform: rotate(45deg);
+    }
+
+    50% {
+      transform: rotate(135deg);
+    }
+
+    75% {
+      transform: rotate(45deg);
+    }
+
+    100% {
+      transform: rotate(-14deg);
+    }
+  }
+
+  .intro__gif6 img {
+    animation: rotateAnimation5 10s linear infinite;
   }
 
   &__inner {
