@@ -11,7 +11,11 @@
   // backdrop-filter: blur(34px);
   // background: linear-gradient(to right, #112252 10%, #9FB4FF 64%);
   background: #343547;
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   // overflow: hidden;
 
 }
