@@ -65,33 +65,38 @@ const initInfoSlider = () => {
     slidesPerView: 'auto',
   });
 
-  // const event = new Swiper('.events__slider', {
-  //   slidesPerView: 3,
-  //   spaceBetween: 10,
-  //   breakpoints: {
-  //     300: {
-  //       slidesPerView: 1,
-  //     },
-  //     500: {
-  //       slidesPerView: 2,
-  //     },
-  //     900: {
-  //       slidesPerView: 3,
-  //     }
+  let eventSwiper;
 
-  //   },
+  const initSwiper = () => {
+    if (window.innerWidth <= 1024) {
+      if (!eventSwiper) { // Проверяем, был ли уже инициализирован слайдер
+        eventSwiper = new Swiper('.grade__slider', {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          autoHeight: true,
+          speed: 800,
+          autoplay: {
+            delay: 3000,
+          },
+          pagination: {
+            el: '.grade-swiper-pagination',
+            clickable: true,
+          },
+        });
+      }
+    } else {
+      if (eventSwiper) { // Если слайдер был инициализирован, уничтожаем его
+        eventSwiper.destroy(true, true);
+        eventSwiper = null;
+      }
+    }
+  };
 
-  //   navigation: {
-  //     nextEl: '.events-swiper-button-next',
-  //     prevEl: '.events-swiper-button-prev',
-  //   },
+  // Инициализация при загрузке страницы
+  document.addEventListener('DOMContentLoaded', initSwiper);
 
-  //   pagination: {
-  //     el: '.events-swiper-pagination',
-  //     clickable: true,
-  //   }
-
-  // })
+  // Инициализация при изменении размеров окна
+  window.addEventListener('resize', initSwiper);
 
   var plus = false;
   var plusSwiper;
