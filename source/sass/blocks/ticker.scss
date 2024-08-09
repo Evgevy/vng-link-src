@@ -42,6 +42,7 @@
 
     &__slide {
         width: 150px;
+        will-change: transform;
     }
 
     @media screen and (max-width: 768px) {

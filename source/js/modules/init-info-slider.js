@@ -53,16 +53,23 @@ const initInfoSlider = () => {
   });
 
   const team = new Swiper('.ticker__marquee', {
-
-    spaceBetween: 120,
+    slidesPerView: 4,
+    spaceBetween: 100,
     loop: true,
     autoplay: {
       delay: 0,
       // pauseOnMouseEnter: true,       
       // disableOnInteraction: false,    
     },
-    speed: 2000,
-    slidesPerView: 'auto',
+    speed: 3000,
+    breakpoints: {
+      300: {
+        spaceBetween: 60,
+      },
+      768: {
+        spaceBetween: 100,
+      }
+    }
   });
 
   let eventSwiper;
