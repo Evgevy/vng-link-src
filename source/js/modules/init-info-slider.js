@@ -65,9 +65,11 @@ const initInfoSlider = () => {
     breakpoints: {
       300: {
         spaceBetween: 60,
+        slidesPerView: 2,
       },
       768: {
         spaceBetween: 100,
+        slidesPerView: 4,
       }
     }
   });
