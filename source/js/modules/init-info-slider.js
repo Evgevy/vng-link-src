@@ -73,7 +73,7 @@ const initInfoSlider = () => {
         eventSwiper = new Swiper('.grade__slider', {
           slidesPerView: 1,
           spaceBetween: 10,
-          autoHeight: true,
+          // autoHeight: true,
           speed: 800,
           autoplay: {
             delay: 3000,
