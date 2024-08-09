@@ -56,6 +56,7 @@ const initInfoSlider = () => {
     slidesPerView: 4,
     spaceBetween: 100,
     loop: true,
+    loopAdditionalSlides: 3,
     autoplay: {
       delay: 0,
       // pauseOnMouseEnter: true,       
@@ -66,10 +67,12 @@ const initInfoSlider = () => {
       300: {
         spaceBetween: 60,
         slidesPerView: 2,
+        speed: 2000,
       },
       768: {
         spaceBetween: 100,
         slidesPerView: 4,
+        speed: 3000,
       }
     }
   });
