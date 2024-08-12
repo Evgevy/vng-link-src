@@ -452,10 +452,19 @@
     opacity: 1;
   }
 
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: 1700px) {
     &__content {
-      padding: 100px 40px;
+      padding: 50px 40px;
+      margin-bottom: 100px;
     }
+
+    &__gif-content {
+      right: 200px;
+      bottom: -250px;
+    }
+  }
+
+  @media screen and (max-width: 1600px) {
 
     &__title {
       font-size: 70px;
@@ -466,9 +475,10 @@
     }
   }
 
-  @media screen and (max-width: 1150px) {
+  @media screen and (max-width: 1270px) {
     &__gif-content {
-      right: -50px;
+      right: 100px;
+      bottom: -300px
     }
   }
 
@@ -498,6 +508,7 @@
 
     &__content {
       padding: 90px 45px 70px;
+      margin: 0 auto;
     }
 
     &__inner {
