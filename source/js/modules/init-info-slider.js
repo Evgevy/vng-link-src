@@ -85,15 +85,15 @@ const initInfoSlider = () => {
         eventSwiper = new Swiper('.grade__slider', {
           slidesPerView: 1,
           spaceBetween: 10,
-          // autoHeight: true,
+          autoHeight: true,
           speed: 800,
           autoplay: {
             delay: 3000,
           },
-          pagination: {
-            el: '.grade-swiper-pagination',
-            clickable: true,
-          },
+          // pagination: {
+          //   el: '.grade-swiper-pagination',
+          //   clickable: true,
+          // },
         });
       }
     } else {

@@ -22,6 +22,7 @@ const initAnimation = () => {
     const offerList = document.querySelector('.offer__list');
     const offerItems = offerList.querySelectorAll('li');
 
+    // Функция для показа элементов
     const showOfferItem = (item, delay) => {
         setTimeout(() => {
             item.classList.remove('hidden');
@@ -29,6 +30,7 @@ const initAnimation = () => {
         }, delay);
     };
 
+    // Создание IntersectionObserver
     const observer = new IntersectionObserver((entries) => {
         if (entries[0].isIntersecting) {
             offerItems.forEach((item, index) => {
@@ -37,7 +39,25 @@ const initAnimation = () => {
         }
     }, { threshold: 0, rootMargin: '0px 0px 0px 0px' });
 
-    observer.observe(offerList);
+    // Функция для управления поведением в зависимости от ширины экрана
+    const handleResize = () => {
+        if (window.matchMedia('(min-width: 690px)').matches) {
+            // Если ширина экрана больше или равна 690px, запускаем observer
+            observer.observe(offerList);
+        } else {
+            // Если ширина экрана меньше 690px, делаем блоки статичными и отключаем observer
+            observer.disconnect();
+            offerItems.forEach((item) => {
+                item.classList.remove('hidden', 'show');
+            });
+        }
+    };
+
+    // Проверяем размер экрана при загрузке страницы
+    handleResize();
+
+    // Добавляем обработчик события на изменение размера экрана
+    window.addEventListener('resize', handleResize);
 
     // Анимация для plus
     const plusInfoBlocks = document.querySelectorAll('.plus__info');

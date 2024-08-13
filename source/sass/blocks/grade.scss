@@ -25,6 +25,13 @@
         position: absolute;
     }
 
+    &__item:nth-child(2)>&__image,
+    &__item:nth-child(3)>&__image {
+        position: static;
+        width: 500px;
+        height: 400px;
+    }
+
     .grade__item.active {
         display: flex;
         justify-content: space-between;
@@ -45,7 +52,7 @@
     }
 
     &__info {
-        max-width: 500px;
+        max-width: 540px;
     }
 
     h3 {
@@ -131,6 +138,10 @@
             flex-direction: column;
         }
 
+        .grade__item.active {
+            gap: 60px;
+        }
+
         .grade__info {
             width: 100%;
             max-width: none;
@@ -168,6 +179,14 @@
             top: -200px;
             z-index: 1;
         }
+
+        &__item:nth-child(2)>&__image,
+        &__item:nth-child(3)>&__image {
+            margin-top: 0;
+            width: 640px;
+            height: 500px;
+            margin: 0 auto;
+        }
     }
 
     @media screen and (max-width: 1024px) {
@@ -186,6 +205,8 @@
         }
 
         &__item {
+            display: flex;
+            gap: 60px;
             position: relative;
             opacity: 1 !important;
             transform: translateX(0) !important;
@@ -199,6 +220,13 @@
         .grade__images {
             width: 130%;
             left: -100px;
+        }
+
+        &__item:nth-child(2)>&__image,
+        &__item:nth-child(3)>&__image {
+            width: 540px;
+            height: 400px;
+            margin: 0 auto;
         }
     }
 
@@ -236,11 +264,22 @@
             top: -180px;
             z-index: 1;
         }
+
+        &__item:nth-child(2)>&__image,
+        &__item:nth-child(3)>&__image {
+            width: 500px;
+            height: 350px;
+            margin: 0 auto;
+        }
     }
 
     @media screen and (max-width: 580px) {
         .grade__images {
             width: 145%;
+        }
+
+        &__item {
+            gap: 30px;
         }
     }
 
@@ -257,6 +296,13 @@
 
         p {
             font-size: 16px;
+        }
+
+        &__item:nth-child(2)>&__image,
+        &__item:nth-child(3)>&__image {
+            width: 450px;
+            height: 300px;
+            margin: 0 auto;
         }
     }
 
@@ -291,6 +337,13 @@
             right: 75px;
             top: -130px;
             z-index: 1;
+        }
+
+        &__item:nth-child(2)>&__image,
+        &__item:nth-child(3)>&__image {
+            width: 400px;
+            height: 250px;
+            margin: 0 auto;
         }
     }
 

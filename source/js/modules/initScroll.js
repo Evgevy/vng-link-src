@@ -7,7 +7,7 @@ const initScroll = () => {
 
         const observerOptions = {
             root: null,
-            rootMargin: '0px',
+            rootMargin: '50px',
             threshold: 1
         };
 
@@ -17,10 +17,12 @@ const initScroll = () => {
                     gradeSection.classList.add('fixed');
                     document.body.style.overflow = 'hidden';
                     isFixed = true;
+                    gradeSection.addEventListener('wheel', handleScroll, { passive: false });
                 } else {
                     gradeSection.classList.remove('fixed');
                     document.body.style.overflow = 'auto';
                     isFixed = false;
+                    gradeSection.removeEventListener('wheel', handleScroll, { passive: false });
                 }
             });
         }, observerOptions);
@@ -56,7 +58,6 @@ const initScroll = () => {
                     updateItems(activeIndex);
                 } else if (activeIndex === items.length - 1) {
                     event.preventDefault(); // Предотвратить стандартное поведение
-                    // Удалить фиксированный класс и позволить прокрутку вниз
                     gradeSection.classList.remove('fixed');
                     isFixed = false;
                     document.body.style.overflow = 'auto';
@@ -70,7 +71,6 @@ const initScroll = () => {
                     updateItems(activeIndex);
                 } else if (activeIndex === 0) {
                     event.preventDefault(); // Предотвратить стандартное поведение
-                    // Удалить фиксированный класс и позволить прокрутку вверх
                     gradeSection.classList.remove('fixed');
                     isFixed = false;
                     document.body.style.overflow = 'auto';
@@ -87,7 +87,6 @@ const initScroll = () => {
                     activeIndex++;
                     updateItems(activeIndex);
                 } else if (activeIndex === items.length - 1) {
-                    // Удалить фиксированный класс и позволить прокрутку вниз
                     gradeSection.classList.remove('fixed');
                     isFixed = false;
                     document.body.style.overflow = 'auto';
@@ -98,7 +97,6 @@ const initScroll = () => {
                     activeIndex--;
                     updateItems(activeIndex);
                 } else if (activeIndex === 0) {
-                    // Удалить фиксированный класс и позволить прокрутку вверх
                     gradeSection.classList.remove('fixed');
                     isFixed = false;
                     document.body.style.overflow = 'auto';
@@ -108,8 +106,29 @@ const initScroll = () => {
         };
 
         document.addEventListener('keydown', handleKeydown);
-        gradeSection.addEventListener('wheel', handleScroll, { passive: false });
     }
+
+    // const observer = new IntersectionObserver((entries) => {
+    //     entries.forEach((entry) => {
+    //         if (entry.isIntersecting) {
+    //             gradeSection.classList.add('fixed');
+    //             document.body.style.overflow = 'hidden';
+    //             isFixed = true;
+    //             gradeSection.addEventListener('wheel', handleScroll, { passive: false });
+    //         } else {
+    //             observer.unobserve(gradeSection);
+    //             gradeSection.classList.remove('fixed');
+    //             document.body.style.overflow = 'auto';
+    //             isFixed = false;
+    //             gradeSection.removeEventListener('wheel', handleScroll, { passive: false });
+    //             observer.observe(gradeSection); // добавляем наблюдатель снова
+    //         }
+    //     });
+    // }, observerOptions);
+
+    // // начинаем наблюдение за элементом .grade
+    // observer.observe(gradeSection);
+
 }
 
 export { initScroll };
